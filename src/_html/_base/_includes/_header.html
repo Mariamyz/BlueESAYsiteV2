@@ -1,5 +1,36 @@
-<header>
-    
-    <h1>Header Test </h1>
-    <a href="about.html">About</a>
-</header>
+    <header class="container-fluid bg-primary">
+        <div class="container d-flex align-items-center justify-content-between">
+            <a href="#"><img class="logo" src="../../../assets/img/logo.png" alt="logo"></a>
+            <nav class="nav-menu d-flex align-items-center">
+                <ul class="nav-list d-flex list-unstyled m-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Services
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                            <li><a class="dropdown-item" href="#">Subservice 1</a></li>
+                            <li><a class="dropdown-item" href="#">Subservice 2</a></li>
+                            <li><a class="dropdown-item" href="#">Subservice 3</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            About Us
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                            <li><a class="dropdown-item" href="#">History</a></li>
+                            <li><a class="dropdown-item" href="#">Team</a></li>
+                            <li><a class="dropdown-item" href="#">Careers</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white how-it-works" href="#">How It Works</a>
+                    </li>
+                </ul>
+                <img class="phone ms-3" src="../../../assets/img/phone.png" alt="phone" height="30">
+                <div class="sign-in btn btn-outline-light ms-3">Sign In</div>
+                <div class="order btn btn-danger ms-2">Order</div>
+                <img src="../../../assets/img/burger.png" alt="burger" class="burger ms-3" height="30">
+            </nav>
+        </div>
+    </header>
