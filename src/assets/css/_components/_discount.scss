@@ -10,6 +10,39 @@
     height: 400px;
     background-repeat: no-repeat;
     background-position: center top;
+    font-family: 'Poppins-Medium';
+    animation: moveClouds 20s linear infinite;
+}
+
+@keyframes moveClouds {
+    from {
+        background-position: 100% top; /* Початок з правого боку */
+    }
+    to {
+        background-position: 0 top; /* Рух до лівого боку */
+    }
+}
+
+
+.rocket {
+    position: absolute;
+    width: 150px; /* Розмір ракети */
+    height: auto;
+    left: 10%;
+    bottom: 20px;
+    animation: flyUpAndDown 5s ease-in-out infinite; /* Додаємо анімацію руху ракети */
+}
+
+@keyframes flyUpAndDown {
+    0% {
+        transform: translateY(0); /* Початкова позиція */
+    }
+    50% {
+        transform: translateY(-30px); /* Ракета піднімається на 30px */
+    }
+    100% {
+        transform: translateY(0); /* Повертається вниз */
+    }
 }
 
 .background-bottom {
@@ -23,7 +56,7 @@
     position: relative;
     z-index: 10;
     margin-top: -150px; 
-    margin-bottom: -150px;
+    margin-bottom: -240px;
 }
 
 .discount {
@@ -155,6 +188,18 @@
                 position: absolute;
                 bottom: -10px;
                 right: -60px;
+                animation: rotateBalloon 6s linear infinite; 
+            }
+            @keyframes rotateBalloon {
+                0% {
+                    transform: rotate(0deg); 
+                }
+                50% {
+                    transform: rotate(15deg); 
+                }
+                100% {
+                    transform: rotate(0deg); 
+                }
             }
 
             .discount-code {
@@ -170,3 +215,70 @@
         }
     }
 }
+
+
+
+.testimonial-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0px;
+    gap: 300px;
+    font-family: 'Poppins-Medium';
+  
+    .arrow {
+      cursor: pointer;
+      width: 50px;
+      height: 50px;
+  
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+  
+    .testimonial-content {
+      max-width: 500px;
+      text-align: center;
+  
+      .testimonial-image {
+        width: 80px;
+        height: 80px;
+        margin: 0 auto 30px auto;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 2px solid #ddd;
+  
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+  
+      h1 {
+        font-weight: bold;
+        margin-bottom: 40px;  
+        font-size: 38px;      
+      }
+  
+      p {
+        margin-top: 15px;
+        font-size: 18px;
+        color: #8b8e91;
+      }
+  
+      .author-name {
+        display: block;
+        margin-top: 10px;
+        font-size: 16px;
+        font-weight: bold;
+        color: #0287c3;
+      }
+      .date{
+        color: #ced0d1;
+      }
+    }
+  }
+  
