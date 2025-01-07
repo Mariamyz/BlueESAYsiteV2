@@ -80,3 +80,29 @@ body {
     text-align: left;
 }
   
+.flying-rocket {
+  width: 80px; 
+  position: absolute;
+  top: 10px; 
+  right: 10px; 
+  z-index: 11;
+  animation: flyWithFloat 12s cubic-bezier(0.25, 1, 0.5, 1) infinite;
+}
+
+@keyframes flyWithFloat {
+  0% {
+    transform: translate(0, 0) rotate(0deg); 
+  }
+  25% {
+    transform: translate(-100px, 200px) rotate(45deg); 
+  }
+  50% {
+    transform: translate(150px, -300px) rotate(90deg); 
+  }
+  75% {
+    transform: translate(-120px, 400px) rotate(270deg); 
+  }
+  100% {
+    transform: translate(0, 0) rotate(360deg); 
+  }
+}
