@@ -16,32 +16,32 @@
 
 @keyframes moveClouds {
     from {
-        background-position: 100% top; /* Початок з правого боку */
+        background-position: 100% top; 
     }
     to {
-        background-position: 0 top; /* Рух до лівого боку */
+        background-position: 0 top; 
     }
 }
 
 
 .rocket {
     position: absolute;
-    width: 150px; /* Розмір ракети */
+    width: 150px; 
     height: auto;
     left: 10%;
     bottom: 20px;
-    animation: flyUpAndDown 5s ease-in-out infinite; /* Додаємо анімацію руху ракети */
+    animation: flyUpAndDown 5s ease-in-out infinite; 
 }
 
 @keyframes flyUpAndDown {
     0% {
-        transform: translateY(0); /* Початкова позиція */
+        transform: translateY(0); 
     }
     50% {
-        transform: translateY(-30px); /* Ракета піднімається на 30px */
+        transform: translateY(-30px); 
     }
     100% {
-        transform: translateY(0); /* Повертається вниз */
+        transform: translateY(0); 
     }
 }
 
@@ -217,7 +217,6 @@
 }
 
 
-
 .testimonial-section {
     display: flex;
     align-items: center;
@@ -282,3 +281,205 @@
     }
   }
   
+  .testimonial-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-family: 'Poppins-Medium';
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    margin: 50px auto;
+    margin-top: -20px; 
+  }
+  
+  h1 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 20px;
+ 
+  }
+  
+  .date {
+    color: #8b8e91;
+    font-size: 14px;
+  }
+  
+  .testimonial-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 20px auto;
+    border: 3px solid #03a9f4;
+  }
+  
+  input[type="radio"] {
+    display: none;
+  }
+  
+  .slides {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+  }
+  
+  .testimonial-content {
+    min-width: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+    transform: translateX(50px);
+    position: absolute;
+    left: 0;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+  }
+  
+  input#slide1:checked ~ .slides .testimonial-content:nth-child(1),
+  input#slide2:checked ~ .slides .testimonial-content:nth-child(2),
+  input#slide3:checked ~ .slides .testimonial-content:nth-child(3) {
+    opacity: 1;
+    transform: translateX(0);
+    position: relative;
+  }
+  
+  .arrow {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    background: none;
+    border-radius: 50%;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+  }
+  
+  .left-arrow {
+    left: 20px;
+  }
+  
+  .right-arrow {
+    right: 20px;
+  }
+
+.testimonial-section {
+    max-width: 900px;  
+    margin: 50px auto;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .testimonial-content {
+    padding: 20px;
+  }
+  
+  .testimonial-image {
+    width: 100px;
+    height: 100px;
+  }
+  
+  h1 {
+    font-size: 32px;
+  }
+  
+  .arrow {
+    width: 40px;
+    height: 40px;
+  }
+
+  .discount-cards-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; 
+    flex-wrap: wrap; 
+}
+
+.discount-cards, .discount-special {
+    background-color: #ffffff;
+    padding: 40px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+@media (max-width: 1024px) {
+    .discount-cards-wrapper {
+        flex-direction: column; 
+        gap: 30px; 
+    }
+
+    .discount-cards, .discount-special {
+        width: 100%; 
+        padding: 20px; 
+    }
+
+    .discount-special {
+      display: none;
+    }
+
+    .discount-special-wrapper {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .discount-cards-wrapper {
+        gap: 20px; 
+    }
+
+    .discount-cards, .discount-special {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .discount-special {
+        text-align: center;
+    }
+
+    .discount-special-wrapper {
+        padding: 15px;
+    }
+
+    .discount-value {
+        font-size: 24px; 
+    }
+
+    .discount-code {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 576px) {
+    .discount-cards-wrapper {
+        gap: 10px; 
+    }
+
+    .discount-cards, .discount-special {
+        padding: 10px;
+    }
+
+    .discount-special {
+        width: 100%;
+    }
+
+    .discount-value {
+        font-size: 20px;
+    }
+
+    .discount-details {
+        font-size: 12px;
+    }
+
+    .discount-code {
+        font-size: 12px;
+    }
+}

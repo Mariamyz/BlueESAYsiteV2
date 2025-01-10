@@ -92,3 +92,107 @@
     color: #555;
     font-family: 'Poppins-Medium';
 }
+
+.magnifying-glass-container {
+    width: 100px;
+    height: 100px;
+    margin: 20px auto;
+    background-color: #03a9f4;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.magnifying-glass-icon {
+    width: 60%;
+    height: auto;
+}
+
+@media (max-width: 1024px) {
+    .step-card {
+        height: 220px; 
+        width: 180px;
+        margin-bottom: 20px;
+    }
+
+    .step-card:not(:last-child)::after {
+        right: -45px; 
+        font-size: 150px; 
+    }
+
+    .step-icon-container {
+        width: 70px;
+        height: 70px;
+    }
+
+    .step-title {
+        font-size: 18px; 
+    }
+
+    .step-text {
+        font-size: 13px; 
+    }
+
+    .magnifying-glass-container {
+        margin-top: 30px; 
+    }
+}
+
+@media (max-width: 768px) {
+    .steps-section {
+        padding: 20px 10px; 
+    }
+
+    .step-card {
+        width: 100%; 
+        height: 200px; 
+    }
+
+    .step-card:not(:last-child)::after {
+        display: none; 
+    }
+
+    .step-icon-container {
+        width: 60px;
+        height: 60px;
+    }
+
+    .step-title {
+        font-size: 16px;
+    }
+
+    .step-text {
+        font-size: 12px;
+    }
+
+    .magnifying-glass-container {
+        margin-top: 40px; 
+    }
+}
+
+@media (max-width: 576px) {
+    .step-card {
+        height: 180px;
+    }
+
+    .step-icon-container {
+        width: 50px;
+        height: 50px;
+    }
+
+    .step-title {
+        font-size: 14px;
+    }
+
+    .step-text {
+        font-size: 11px;
+    }
+
+    .magnifying-glass-container {
+        width: 80px;
+        height: 80px;
+        margin: 50px auto;
+    }
+}
